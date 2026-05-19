@@ -2155,7 +2155,6 @@ nav ul li a:hover::after {
         height: 230px;
     }
 
-    /* SOBRE MI */
 
     .sobre-mi {
         padding: 45px 4%;
@@ -2198,6 +2197,7 @@ nav ul li a:hover::after {
 
     .steps {
         gap: 10px;
+        margin-left: 0;
     }
 
     .step {
