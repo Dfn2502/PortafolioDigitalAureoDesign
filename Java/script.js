@@ -50,3 +50,24 @@ document.querySelectorAll(".project-card").forEach(card => {
         track.style.animationPlayState = "running";
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const navMenu = document.getElementById("nav-menu");
+    const navLinks = document.querySelectorAll("#nav-menu ul li a");
+
+    // Alternar clases al hacer click en la hamburguesa
+    hamburgerBtn.addEventListener("click", () => {
+        hamburgerBtn.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    });
+
+    // Cerrar el menú automáticamente al clickear un enlace (anclas internas)
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            hamburgerBtn.classList.remove("active");
+            navMenu.classList.remove("active");
+        });
+    });
+});

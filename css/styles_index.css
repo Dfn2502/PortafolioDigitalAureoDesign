@@ -8,7 +8,6 @@
 *::after {
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -30,63 +29,60 @@ body {
 }
 
 header {
-    height: 100%;
+    position: fixed; /* Hace que el nav siga el scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12dvh;
     background-color: #0A1622;
-    height: 15dvh;
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "img nav";
+    z-index: 1000; /* Asegura que quede por encima de todo el contenido */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-header picture {
-    align-content: center;
-    text-align: -webkit-center;
+.header-container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
 }
 
-header img {
-    width: 71%;
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: 200px; /* Ajusta según el tamaño real de tu logo */
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
 }
 
 header nav {
-    grid-area: nav;
-    width: 100%;
     display: flex;
-
+    align-items: center;
 }
 
 header nav ul {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    width: 100%;
-    gap: 9%;
-    color: white;
-    font-size: 120%;
-    text-align: center;
-    align-items: center;
-    margin-left: 10%;
+    display: flex;
+    gap: 40px;
+    margin: 0;
     padding: 0;
-    margin-right: 13%;
-}
-
-nav ul li {
-    display: grid;
-    height: 40%;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    width: 100%;
-    height: 100%;
-    align-content: space-around;
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 600;
+    font-size: 1.1rem;
     position: relative;
-    display: inline;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
 }
 
 nav ul li a::after {
@@ -94,17 +90,40 @@ nav ul li a::after {
     position: absolute;
     left: 50%;
     bottom: 0;
-
     width: 0;
     height: 2px;
     background: #B89555;
-
     transform: translateX(-50%);
     transition: width 0.3s ease;
 }
 
 nav ul li a:hover::after {
     width: 100%;
+}
+
+/* BOTÓN HAMBURGUESA */
+.hamburger {
+    display: none; /* Oculto en escritorio */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Compensación de altura para la primera sección debido al header fixed */
+.primeraseccion {
+    margin-top: 12dvh; /* Debe ser igual al height del header */
 }
 
 .primeraseccion {
@@ -1660,12 +1679,52 @@ nav ul li a:hover::after {
 }
 
 @media screen and (max-width:768px) {
-    header {
-        height: 9dvh;
+    .hamburger {
+        display: flex; /* Aparece en móviles */
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido por defecto a la derecha */
+        width: 50%;  /* Ancho del menú desplegable */
+        height: 100vh;
+        background-color: #0E1E2E;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Clase que añadirá JS para mostrar el menú */
+    header nav.active {
+        right: 0;
     }
 
     header nav ul {
-        font-size: 85%;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    nav ul li a {
+        font-size: 1.4rem;
+    }
+
+    /* ANIMACIÓN DE HAMBURGUESA A "X" */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: #B89555;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: #B89555;
     }
 
     .primeraseccion {
@@ -2363,7 +2422,7 @@ nav ul li a:hover::after {
 
     header nav ul {
         font-size: 65%;
-        gap: 2%;
+        gap: 30%;
     }
 
     .primeraseccion {
@@ -2652,7 +2711,7 @@ nav ul li a:hover::after {
     }
 
     .cards-container {
-        height: 170dvh;
+        height: 125dvh;
     }
 
     .project-card {

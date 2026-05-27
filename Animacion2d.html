@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación | Aureo Design</title>
+    <link rel="icon" type="image/png" href="./Recursos/Logo@3x.png">
+
+    <link rel="stylesheet" href="./css/styles_categoria.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="modal-imagen" id="modalImagen">
+        <span class="cerrar-modal">&times;</span>
+        <img id="imagenGrande" src="" alt="" style="display: none;">
+        <video id="videoGrande" controls autoplay loop style="display: none;"></video>
+    </div>
+
+    <header>
+        <img src="./Recursos/LogoTexto@3x.png" alt="Aureo Design Logo" class="logo">
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="navMenu">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./index.html#servicios">Servicios</a></li>
+                <li><a href="./index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-categoria">
+        <div class="hero-texto">
+            <span class="mini-titulo">SERVICIO</span>
+            <h1>Animación <span>2D & 3D</span></h1>
+            <p>Sitios modernos, funcionales y optimizados para transmitir valor y mejorar la experiencia del usuario.</p>
+        </div>
+
+        <div class="hero-imagen">
+            <video autoplay muted loop playsinline>
+                <source src="./Recursos/Proyectos/Animacion/Daredevil_Spiderman_Final (1).mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <section class="grid-proyectos">
+        <article class="project-card">
+            <div class="media-container">
+                <video autoplay muted loop playsinline>
+                    <source src="./Recursos/Proyectos/Animacion/Daredevil_Spiderman_Final (1).mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="contenido-card">
+                <h3>Animación Daredevil</h3>
+                <p>Recreación de escena de Daredevil contra Spiderman.</p>
+                <div class="tags">
+                    <span>Autodesk Maya</span>
+                    <span>Blender</span>
+                    <span>After Effects</span>
+                    <span>Audition</span>
+                </div>
+                <button class="btn-card abrir-imagen" data-img="./Recursos/Proyectos/Animacion/Daredevil_Spiderman_Final (1).mp4">
+                    VER PROYECTO
+                </button>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="media-container">
+                <video autoplay muted loop playsinline>
+                    <source src="./Recursos/Proyectos/Animacion/Diego_PostProduccion_AnimacionPersonal.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="contenido-card">
+                <h3>Animación Zorro</h3>
+                <p>Escena creada para materia de animación.</p>
+                <div class="tags">
+                    <span>Autodesk Maya</span>
+                    <span>Blender</span>
+                    <span>After Effects</span>
+                    <span>Audition</span>
+                </div>
+                <button class="btn-card abrir-imagen" data-img="./Recursos/Proyectos/Animacion/Diego_PostProduccion_AnimacionPersonal.mp4">
+                    VER PROYECTO
+                </button>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="media-container">
+                <video autoplay muted loop playsinline>
+                    <source src="./Recursos/Proyectos/Animacion/Proyecto Final.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="contenido-card">
+                <h3>Animación 2D</h3>
+                <p>Mini historia animada.</p>
+                <div class="tags">
+                    <span>After Effects</span>
+                    <span>Illustrator</span>
+                    <span>Audition</span>
+                </div>
+                <button class="btn-card abrir-imagen" data-img="./Recursos/Proyectos/Animacion/Proyecto Final.mp4">
+                    VER PROYECTO
+                </button>
+            </div>
+        </article>
+    </section>
+
+    <section class="cta-final">
+        <div class="cta-container">
+            <h2>¿Listo para llevar tu marca al <span>siguiente nivel?</span></h2>
+            <a href="#" class="btn-card">CONTACTAR</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <div class="footer-logo">
+                    <img src="./Recursos/Logo@3x.png" alt="Logo">
+                    <h2>AUREO <span>DESIGN</span></h2>
+                </div>
+                <p>Diseño estratégico que transforma ideas en experiencias visuales.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Java/script_publicidad.js"></script>
+</body>
+</html>

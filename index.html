@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aureo Design</title>
+    <link rel="icon" type="image/png" href="./Recursos/Logo@3x.png">
     <link rel="stylesheet" href="./css/styles_index.css">
 
 
@@ -19,18 +20,27 @@
 
 <body>
     <header>
-        <picture>
-            <img src="./Recursos/LogoTexto@3x.png" alt="">
+    <div class="header-container">
+        <picture class="logo-container">
+            <img src="./Recursos/LogoTexto@3x.png" alt="Aureo Design">
         </picture>
-        <nav>
+        
+        <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Sobre Mi</a></li>
-                <li><a href="#">Proceso</a></li>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobremi">Sobre Mi</a></li>
+                <li><a href="#proceso">Proceso</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
     <section class="primeraseccion">
         <div class="hero-content">
@@ -48,8 +58,8 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="#" class="btn-gold">VER PROYECTOS</a>
-                <a href="#" class="btn-outline">
+                <a href="#servicios" class="btn-gold">VER PROYECTOS</a>
+                <a href="https://www.instagram.com/aure.odesign/" class="btn-outline">
                     CONTACTAME
                     <i class="fa-brands fa-instagram"></i>
 
@@ -62,7 +72,7 @@
             <img src="./Recursos/mockups@3x.png" alt="">
         </figure>
     </section>
-    <section class="servicios">
+    <section class="servicios" id="servicios">
         <div class="texto-servicios">
 
             <span class="mini-titulo">SERVICIOS Y</span>
@@ -95,10 +105,10 @@
                     <h3>Diseño UX</h3>
 
                     <p>
-                        Ideas que comunican y venden
+                        UX/UI con enfoque moderno
                     </p>
 
-                    <button class="btn-card">
+                    <button onclick="window.location.href='disenoux.html'" class="btn-card">
 
                         <span>Ver proyectos</span>
 
@@ -131,7 +141,7 @@
                         Ideas que comunican y venden
                     </p>
 
-                    <button class="btn-card">
+                    <button onclick="window.location.href='disenopublicitario.html'" class="btn-card">
 
                         <span>Ver proyectos</span>
 
@@ -163,7 +173,7 @@
                         Sitios modernos y funcionales
                     </p>
 
-                    <button class="btn-card">
+                    <button onclick="window.location.href='disenoweb.html'" class="btn-card">
 
                         <span>Ver proyectos</span>
 
@@ -175,37 +185,7 @@
 
             </article>
 
-            <article class="service-card">
-
-                <video autoplay muted loop playsinline>
-                    <source src="./Recursos/Videos/redes.mp4" type="video/mp4">
-                </video>
-
-                <div class="overlay"></div>
-
-                <div class="contenido">
-
-                    <div class="icono">
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-
-                    <h3>Redes Sociales</h3>
-
-                    <p>
-                        Contenido visual que destaca
-                    </p>
-
-                    <button class="btn-card">
-
-                        <span>Ver proyectos</span>
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </button>
-
-                </div>
-
-            </article>
+            
 
             <article class="service-card">
 
@@ -227,7 +207,7 @@
                         Movimiento que da vida
                     </p>
 
-                    <button class="btn-card">
+                    <button onclick="window.location.href='Animacion2d.html'" class="btn-card">
 
                         <span>Ver proyectos</span>
 
@@ -243,7 +223,6 @@
     </section>
 
 
-    <!--Proyectos destacados-->
     <section class="proyectos">
         <div class="titulo-proyectos">
             <h2>Proyectos destacados</h2>
@@ -381,9 +360,8 @@
             </div>
         </div>
     </section>
-    <!---->
 
-    <section class="sobre-mi">
+    <section class="sobre-mi" id="sobremi">
 
         <div class="sobre-container">
 
@@ -428,7 +406,6 @@
 
     </section>
 
-    <!-- TECNOLOGÍAS -->
     <section class="tecnologias">
 
         <div class="titulo-tech">
@@ -554,8 +531,7 @@
 
     </section>
 
-    <!-- PROCESO -->
-    <section class="proceso">
+    <section class="proceso" id="proceso">
 
         <div class="proceso-header">
 
@@ -661,9 +637,9 @@
 
     </section>
 
-    <section class="cta-final">
+    <section class="cta-final" id="contacto">
 
-    <div class="cta-container">
+    <div class="cta-container" >
 
         <div class="cta-left">
 
@@ -678,12 +654,8 @@
 
         <div class="cta-right">
 
-            <a href="#" class="cta-btn whatsapp">
-                <i class="fa-brands fa-whatsapp"></i>
-                +52 618-178-1462
-            </a>
 
-            <a href="#" class="cta-btn instagram">
+            <a href="https://www.instagram.com/aure.odesign/" class="cta-btn instagram">
                 <i class="fa-brands fa-instagram"></i>
                 @aureo.design
             </a>
@@ -725,10 +697,10 @@
             <h3>Enlaces</h3>
 
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Proceso</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
 
         </div>
