@@ -1397,6 +1397,9 @@ nav ul li a:hover::after {
     header {
         height: 13dvh;
     }
+    .primeraseccion{
+        margin-top: 13dvh;
+    }
 
     header img {
         width: 58%;
@@ -2142,7 +2145,9 @@ nav ul li a:hover::after {
     header {
         height: 10dvh;
     }
-
+.primeraseccion{
+        margin-top: 10dvh;
+    }
     header nav ul {
         gap: 4%;
         font-size: 78%;
@@ -2415,7 +2420,9 @@ nav ul li a:hover::after {
     header {
         height: 8dvh;
     }
-
+.primeraseccion{
+        margin-top: 8dvh;
+    }
     header img {
         width: 65%;
     }
